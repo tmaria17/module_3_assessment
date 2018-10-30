@@ -1,0 +1,6 @@
+class WordFacade
+
+
+
+
+end

@@ -9,9 +9,9 @@ class WordsController < ApplicationController
 
     response = conn.get("/api/v1/entries/en/mindfulness/sentences")
     @word = JSON.parse(response.body, symbolize_names: true)[:results]
-    binding.pry
-    @word[0][:lexicalEntries][0][:sentences]
-    @word[0][:lexicalEntries][0][:language]
+    # binding.pry
+    # @word[0][:lexicalEntries][0][:sentences]
+    # @word[0][:lexicalEntries][0][:language]
   end
 
   def create
