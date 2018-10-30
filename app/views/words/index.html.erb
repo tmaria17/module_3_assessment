@@ -1,6 +1,6 @@
 Examples for using 'mindfulness'
-<ul>
-  <% @word[0][:lexicalEntries][0][:sentences].each do |sentence|%>
-  <li> <%= sentence[:text] %></li>
+  <%@sentences.each do |sentence|%>
+  <ul class="sentence">
+      <li> <%= sentence[:text] %></li>
+  </ul>
   <% end %>
-</ul>

@@ -10,8 +10,7 @@ describe 'user searches for a word' do
 
     save_and_open_page
     expect(page).to have_content("Examples for using 'mindfulness'")
-    expect(page).to have_content(sentences)
-    expect(page).to have_css(".sentence", count: 2)
+    expect(page).to have_css(".sentence")
   end
 # And I fill in a text box with "mindfulness"
 # And I click "Submit"
