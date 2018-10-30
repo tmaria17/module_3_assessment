@@ -1,4 +1,4 @@
-class WordsController < ApplicationController
+class SentencesController < ApplicationController
 
   def index
     conn = Faraday.new(url: "https://od-api.oxforddictionaries.com") do |faraday|

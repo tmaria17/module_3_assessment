@@ -6,7 +6,7 @@ describe 'user searches for a word' do
     save_and_open_page
     fill_in :q, with: "mindfulness"
     click_on "Submit"
-    expect(current_path).to eq(words_path)
+    expect(current_path).to eq(sentences_path)
 
     save_and_open_page
     expect(page).to have_content("Examples for using 'mindfulness'")
