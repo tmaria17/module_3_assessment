@@ -1,8 +1,8 @@
 class WordFacade
-
-  def initialize
-
-  end
+  # 
+  # def initialize
+  #
+  # end
 
 
 
@@ -21,6 +21,5 @@ private
   def get_json(url)
     JSON.parse(conn.get(url).body, symbolize_names: true)[:results]
   end
-
 
 end
