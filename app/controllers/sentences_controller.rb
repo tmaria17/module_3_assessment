@@ -10,6 +10,7 @@ class SentencesController < ApplicationController
     response = conn.get("/api/v1/entries/en/mindfulness/sentences")
     @word = JSON.parse(response.body, symbolize_names: true)[:results]
     @sentences =  @word[0][:lexicalEntries][0][:sentences]
+    #filter out by region?
   end
 
   def create
