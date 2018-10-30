@@ -4,9 +4,10 @@ describe 'user searches for a word' do
   it 'displays example sentences' do
     visit "/"
     save_and_open_page
-
     fill_in :q, with: "mindfulness"
     click_on "Submit"
+    expect(current_path).to eq(words_path)
+
 
     expect(page).to have_content("Examples for using 'mindfulness'")
     expect(page).to have_content(sentences)
@@ -18,4 +19,11 @@ describe 'user searches for a word' do
 # And I should see a list of sentences with examples of how to use the word
 # And I should see only sentences where the region for usage is "Brittish" or "Canadian"
 # And I should not see sentences for any other regions (or blank regions)
+
+
+# <%= form_tag(words_path method: :get) do %>
+#   <%= label_tag(:q, "Search for:") %>
+#   <%= text_field_tag(:q) %>
+#   <%= submit_tag("Submit") %>
+# <% end %>
 end
