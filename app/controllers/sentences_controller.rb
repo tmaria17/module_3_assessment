@@ -1,6 +1,7 @@
 class SentencesController < ApplicationController
 
   def index
+    
     conn = Faraday.new(url: "https://od-api.oxforddictionaries.com") do |faraday|
       faraday.headers["app_id"] = "3537563a"
       faraday.headers["app_key"] = "10a731a970765162539b2fc23d9a723e"
